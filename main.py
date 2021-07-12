@@ -48,7 +48,7 @@ def main():
         "starter": starter
     }
     print("Name:", playerinfo["name"], "\n" +
-          "Starter:", playerinfo["starter"])
+          "Starter:", playerinfo["starter"]["name"])
 
 
 main()
