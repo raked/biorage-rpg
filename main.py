@@ -35,6 +35,24 @@ def printText(text, speed):  # text defined as variable, speed in seconds per ch
     print()
 
 
+def trollFace(text):
+    print("░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░")
+    print("░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░")
+    print("░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░")
+    print("░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░")
+    print("░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░")
+    print("█░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█")
+    print("█░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█")
+    print("░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░")
+    print("░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░")
+    print("░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░")
+    print("░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░")
+    print("░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░")
+    print("░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░")
+    print("░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░")
+    print("░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░░█░░", text)
+
+
 def main():
     printText("Welcome to Biorage RPG!", .05)
     printText("Please enter a name for your character below", .05)
@@ -69,6 +87,8 @@ def main():
     }
     print("Name:", playerinfo["name"], "\n" +
           "Starter:", playerinfo["starter"]["name"])
+
+    trollFace("get owned")
 
 
 main()
