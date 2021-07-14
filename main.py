@@ -56,6 +56,11 @@ def printText(text, speed):  # text defined as variable, speed in seconds per ch
     print()
 
 
+def fightSequence(enemy):
+    print("A random", enemy["name"], "has appeared!")
+    print("It doesn't look very friendly.")
+
+
 def trollFace(text):
     print("░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░")
     print("░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░")
@@ -108,6 +113,8 @@ def main():
     }
     print("Name:", playerinfo["name"], "\n" +
           "Starter:", playerinfo["starter"]["name"])
+
+    fightSequence(enemy1)
 
     trollFace("get owned")
 
