@@ -48,7 +48,7 @@ enemy3 = {
 }
 
 
-def printText(text, speed):  # text defined as variable, speed in seconds per character
+def printText(text, speed=.05):  # text defined as variable, speed in seconds per character
     for i in range(len(text)):
         printf(text[i])
         time.sleep(speed)
@@ -57,8 +57,9 @@ def printText(text, speed):  # text defined as variable, speed in seconds per ch
 
 
 def fightSequence(enemy):
-    print("A random", enemy["name"], "has appeared!")
-    print("It doesn't look very friendly.")
+    printText("A random " + enemy["name"] + " has appeared!")
+    printText("It doesn't look very friendly.")
+    printText("What do you want to do?")
 
 
 def trollFace(text):
