@@ -1,3 +1,4 @@
+# encoding: utf8
 import time
 import sys
 printf = sys.stdout.write
