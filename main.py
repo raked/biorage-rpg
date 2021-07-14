@@ -24,9 +24,6 @@ starter3 = {
 }
 
 
-introductoryText1 = "This is a sample text! Bottom Text."
-
-
 def printText(text, speed):  # text defined as variable, speed in seconds per character
     for i in range(len(text)):
         printf(text[i])
