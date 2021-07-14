@@ -23,6 +23,30 @@ starter3 = {
     "stamina": 3
 }
 
+enemy1 = {
+    "name": "Radioactive Waste",
+    "image": "",
+    "damage": 3,
+    "health": 1,
+    "stamina": 2
+}
+
+enemy2 = {
+    "name": "The Troll",
+    "image": "",
+    "damage": 1,
+    "health": 3,
+    "stamina": 2
+}
+
+enemy3 = {
+    "name": "marco from BorderLands 3",
+    "image": "",
+    "damage": 2,
+    "health": 2,
+    "stamina": 1
+}
+
 
 def printText(text, speed):  # text defined as variable, speed in seconds per character
     for i in range(len(text)):
