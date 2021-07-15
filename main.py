@@ -66,6 +66,7 @@ def fightSequence(enemy):
     userEncounterChoice = input()
     if (userEncounterChoice == "1"):
         enemy["health"] -= 1
+        printText("You hit " + enemy["name"] + "for 1hp")
     elif (userEncounterChoice == "2"):
         printText("You flee the fight!")
     else:
@@ -76,18 +77,18 @@ def main():
     printText("Welcome to Biorage RPG!", .05)
     printText("Please enter a name for your character below", .05)
     name = input()
-    print("----------------------------------------------------")
+    printText("----------------------------------------------------", .02)
     printText("\t\tChoose your starter", .05)
     printText("\tStarter 1\tStarter 2\tStarter 3", .05)
-    print("Name:\t" + starter1["name"] + "\t" +
-          starter2["name"] + "\t" + starter3["name"])
-    print("Damage:\t" + str(starter1["damage"]) + "\t\t" +
-          str(starter2["damage"]) + "\t\t" + str(starter3["damage"]))
-    print("Health:\t" + str(starter1["health"]) + "\t\t" +
-          str(starter2["health"]) + "\t\t" + str(starter3["health"]))
-    print("Stamina:" + str(starter1["stamina"]) + "\t\t" +
-          str(starter2["stamina"]) + "\t\t" + str(starter3["stamina"]))
-    print("----------------------------------------------------")
+    printText("Name:\t" + starter1["name"] + "\t" +
+              starter2["name"] + "\t" + starter3["name"])
+    printText("Damage:\t" + str(starter1["damage"]) + "\t\t" +
+              str(starter2["damage"]) + "\t\t" + str(starter3["damage"]))
+    printText("Health:\t" + str(starter1["health"]) + "\t\t" +
+              str(starter2["health"]) + "\t\t" + str(starter3["health"]))
+    printText("Stamina:" + str(starter1["stamina"]) + "\t\t" +
+              str(starter2["stamina"]) + "\t\t" + str(starter3["stamina"]))
+    printText("----------------------------------------------------", .02)
     starterChoice = printText("Enter your starter choice (1, 2, 3) below", .05)
     starterChoice = input()
     if (starterChoice == "1" or starterChoice == "2" or starterChoice == "3"):
