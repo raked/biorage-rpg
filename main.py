@@ -62,6 +62,14 @@ def fightSequence(enemy):
     printText("A random " + enemy["name"] + " has appeared!")
     printText("It doesn't look very friendly.")
     printText("What do you want to do?")
+    printText("(1)Attack\t(2)Flee")
+    userEncounterChoice = input()
+    if (userEncounterChoice == "1"):
+        enemy["health"] -= 1
+    elif (userEncounterChoice == "2"):
+        printText("You flee the fight!")
+    else:
+        printText("Please choose a valid option.")
 
 
 def main():
