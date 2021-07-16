@@ -119,5 +119,9 @@ def main():
     printText("A random '" + enemy2["name"] + "' appears!")
     printText("It doesn't look very friendly.")
 
+    printText("What do you want to do?")
+    printText("(1)Attack (2)Flee")
+    userChoice = input()
+
 
 main()
