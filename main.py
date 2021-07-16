@@ -111,7 +111,11 @@ def main():
     print("Name:", playerinfo["name"], "\n" +
           "Starter:", playerinfo["starter"]["name"])
 
-    fightSequence(enemy2)
+    playerStarterHealth = playerinfo["starter"]["health"]
+    playerStarterDamage = playerinfo["starter"]["damage"]
+    playerStarterStamina = playerinfo["starter"]["stamina"]
+
+    
 
 
 main()
