@@ -26,7 +26,7 @@ starter3 = {
 
 enemy1 = {
     "name": "Radioactive Waste",
-    "image": "",
+    "image": "     _.-^^---....,,--       \n _--                  --_  \n<                        >)\n|                         | \n \._                   _./  \n    ```--. . , ; .--'''       \n          | |   |             \n       .-=||  | |=-.   \n       `-=#$%&%$#=-'   \n          | ;  :|     \n _____.,-#%&$@%#&#~,._____",
     "damage": 3,
     "health": 1,
     "stamina": 2
@@ -105,7 +105,7 @@ def main():
     print("Name:", playerinfo["name"], "\n" +
           "Starter:", playerinfo["starter"]["name"])
 
-    fightSequence(enemy2)
+    fightSequence(enemy1)
 
 
 main()
