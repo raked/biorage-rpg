@@ -78,11 +78,18 @@ def printText(text, speed=.05):  # text defined as variable, speed in seconds pe
 
 def main():
     printText("Welcome to Biorage RPG!", .05)
-    printText("Please enter a name for your character below", .05)
-    name = input()
-    printText("----------------------------------------------------", .02)
-    printText("\t\tChoose your starter", .05)
-    printText("\tStarter 1\tStarter 2\tStarter 3", .05)
+
+    name = ""
+
+    while (name == ""):
+        printText("Please enter a name for your character below", .05)
+        name = input()
+        if (name == ""):
+            printText("Name invalid. Please enter at least 1 character.", .05)
+
+    printText("----------------------------------------------------", .01)
+    printText("\t\tChoose your starter", .01)
+    printText("\tStarter 1\tStarter 2\tStarter 3", .01)
     printText("Name:\t" + starter1["name"] + "\t" +
               starter2["name"] + "\t" + starter3["name"])
     printText("Damage:\t" + str(starter1["damage"]) + "\t\t" +
@@ -91,8 +98,8 @@ def main():
               str(starter2["health"]) + "\t\t" + str(starter3["health"]))
     printText("Stamina:" + str(starter1["stamina"]) + "\t\t" +
               str(starter2["stamina"]) + "\t\t" + str(starter3["stamina"]))
-    printText("----------------------------------------------------", .02)
-    starterChoice = printText("Enter your starter choice (1, 2, 3) below", .05)
+    printText("----------------------------------------------------", .01)
+    starterChoice = printText("Enter your starter choice (1, 2, 3) below", .01)
     starterChoice = input()
     if (starterChoice == "1" or starterChoice == "2" or starterChoice == "3"):
         if (starterChoice == "1"):
@@ -103,7 +110,7 @@ def main():
             starter = starter3
     else:
         printText(
-            "Please make a valid selection. Restart your application to retry.", .05)
+            "Please make a valid selection. Restart your application to retry.", .01)
     playerinfo = {
         "name": name,
         "starter": starter
@@ -115,7 +122,7 @@ def main():
     playerStarterDamage = playerinfo["starter"]["damage"]
     playerStarterStamina = playerinfo["starter"]["stamina"]
 
-    printText(enemy2["image"], .01)
+    printText(enemy2["image"], .005)
     printText("A random '" + enemy2["name"] + "' appears!")
     printText("It doesn't look very friendly.")
 
