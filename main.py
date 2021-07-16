@@ -57,23 +57,10 @@ def printText(text, speed=.05):  # text defined as variable, speed in seconds pe
     print()
 
 
-# def fightSequence(enemy):
-#    printText(enemy["image"], 0.02)
-#    printText("A random " + enemy["name"] + " has appeared!")
-#    printText("It doesn't look very friendly.")
-#    while enemy["health"] != 0:
-#        printText("What do you want to do?")
-#        printText("(1)Attack\t(2)Flee")
-#        userEncounterChoice = input()
-#        if (userEncounterChoice == "1"):
-#            enemy["health"] -= 1
-#            printText("You hit " + enemy["name"] + " for 1hp")
-#            if(enemy["health"] == 0):
-#                printText("You have defeated " + enemy["name"] + "!")
-#        elif (userEncounterChoice == "2"):
-#            printText("You flee the fight!")
-#        else:
-#            printText("Please choose a valid option. Restart to try again.")
+def fightSequence(enemy):
+    printText(enemy["image"], .005)
+    printText("A random '" + enemy["name"] + "' has appeared!")
+    printText("It doesn't look very friendly.")
 
 
 def main():
@@ -118,17 +105,7 @@ def main():
     print("Name:", playerinfo["name"], "\n" +
           "Starter:", playerinfo["starter"]["name"])
 
-    playerStarterHealth = playerinfo["starter"]["health"]
-    playerStarterDamage = playerinfo["starter"]["damage"]
-    playerStarterStamina = playerinfo["starter"]["stamina"]
-
-    printText(enemy2["image"], .005)
-    printText("A random '" + enemy2["name"] + "' appears!")
-    printText("It doesn't look very friendly.")
-
-    printText("What do you want to do?")
-    printText("(1)Attack (2)Flee")
-    userChoice = input()
+    fightSequence(enemy2)
 
 
 main()
