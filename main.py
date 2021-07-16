@@ -57,7 +57,7 @@ def printText(text, speed=.05):  # text defined as variable, speed in seconds pe
     print()
 
 
-def fightSequence(enemy):  # i honestly don't think i've done very good here we can do better
+def fightSequence(enemy):
     printText(enemy["image"], 0.02)
     printText("A random " + enemy["name"] + " has appeared!")
     printText("It doesn't look very friendly.")
