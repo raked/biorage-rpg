@@ -67,10 +67,12 @@ def fightSequence(enemy):
     if (userEncounterChoice == "1"):
         enemy["health"] -= 1
         printText("You hit " + enemy["name"] + "for 1hp")
+        if(enemy["health"] == 0):
+            printText("You have defeated " + enemy["name"] + "!")
     elif (userEncounterChoice == "2"):
         printText("You flee the fight!")
     else:
-        printText("Please choose a valid option.")
+        printText("Please choose a valid option. Restart to try again.")
 
 
 def main():
