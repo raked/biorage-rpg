@@ -61,18 +61,19 @@ def fightSequence(enemy):  # i honestly don't think i've done very good here we 
     printText(enemy["image"], 0.02)
     printText("A random " + enemy["name"] + " has appeared!")
     printText("It doesn't look very friendly.")
-    printText("What do you want to do?")
-    printText("(1)Attack\t(2)Flee")
-    userEncounterChoice = input()
-    if (userEncounterChoice == "1"):
-        enemy["health"] -= 1
-        printText("You hit " + enemy["name"] + "for 1hp")
-        if(enemy["health"] == 0):
-            printText("You have defeated " + enemy["name"] + "!")
-    elif (userEncounterChoice == "2"):
-        printText("You flee the fight!")
-    else:
-        printText("Please choose a valid option. Restart to try again.")
+    while enemy["health"] != 0:
+        printText("What do you want to do?")
+        printText("(1)Attack\t(2)Flee")
+        userEncounterChoice = input()
+        if (userEncounterChoice == "1"):
+            enemy["health"] -= 1
+            printText("You hit " + enemy["name"] + " for 1hp")
+            if(enemy["health"] == 0):
+                printText("You have defeated " + enemy["name"] + "!")
+        elif (userEncounterChoice == "2"):
+            printText("You flee the fight!")
+        else:
+            printText("Please choose a valid option. Restart to try again.")
 
 
 def main():
